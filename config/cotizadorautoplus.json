@@ -1,0 +1,11 @@
+{
+  "type": "service_account",
+  "project_id": "cotizadorautoplus",
+  "private_key_id": "e378e924d625aef30043d4764fdee821cbafc7d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDBwz6iMITnYvas\nAsHQgT+SOwSYIbyLrq3jD/2XCfl1zXt9iKhYSXX3khWgq4+lNCmiU798fdp6j2/a\nStqbMUNp/+8Y7g8zDOotfbVpwSGrHJ2v/EG2221BV9Y2fCVY0A6H5NTUWwq5MX4o\nWKoL4Xobp7+GVjS61RATrvonPJDliARryCP7+4+s3UuOKGee4jSwK0oly3EOYes7\nYFiJ8BVE49sAqB9i84mLXkNIkXGAQDhjfgJaPz8jlaMX20zn3F05bqApMY2xFrR3\nN/NNBb0ufyIyzjkOXJXUKDTiZwl1C1jyxcMqaP3fqtfBf80XXP2hGmcVwGkIb3uF\nSDMWubKfAgMBAAECggEABIWjfRKHz4SiQCJyVoTlsGp7MXe8GEBz43Q4lWFQtpyc\nkLHzR9gzDhuVMKJAYHkmrZipw+SGCE03rY8Iqg2MxrkH4fuQVD8tafFgnf65Y+5v\nia9n8zYMxzUfFTdxgbCdXjOLegdD6U2L5bIoCc3x1RploGN7qI6XaPYw9WB2+zxW\ngKV7KoV3NRlkdVdyZWG0RpYKe7LN3+6OK+8XCDBeveYjwOrFQW8Dxm5Fd8TlKVmp\nQjwb+SUZCiY9+WNieegUVFw2FxB6B6uMQu19QUJwnH/1tfLa1yTosvW2iTKqhjqR\nDHR0hjJa/phy9dW8jg4E2E7WQkTx0zHtDqI7b3I2wQKBgQDrd+9cpFFPaLaRph8X\n38RjztKB8n7rxrmmlgm/NpctSk1tEL+v67IY5OeaVUsfF1aII+Y6tx4JGNNrZrW2\nFSUeSPrpC51NzRhPZipHGvhjFnTsQXMZWW/9zqtkwTEDNvcHyH2XDtOQLKQUBws1\nqKEGv1HYHl2blaxCpELSCnq1wQKBgQDSqF0JSarMbpBp8hhAdd+Grz+qCGce+WvU\nFoYOMLeRfBJtwqEFZk41k3Vr73KwGUWkjLDvWKLP5uStFW2VRJrrg1ETtiFUtEdh\nuSO8TjjkGsonkFnnYp4fCANMq+5Zx7rkc5dthqPf23T4vRm5shcd6MhhQVTlBlhl\nDlTJdcBAXwKBgQC9xwgwDm9KJQcgFFdzEnJiTsry2NLajGwMi1iHuCPX6M7GXH1h\n+ACud68CgEPvZwvi5awlHnkis9OR+FHz0s77va4cLbQ2hFpXg+wHKwGOOwc5cval\nM6RDV1Jj/iDWinJG35v5J4Xz6UbErXinYqWFnqUEHlUrlFIl0+XXC4MjAQKBgQCG\nncCWZtUWvrDagzKsPqcQ0nzEk4oSaSFW7u3Ls6Ya+kZsjauIX9AqvIiU6PdJQV0X\nwjBvQx0H7mzDjqXwdV7qkYgGKKU0E+Bpun3zn6kLW3NDxSMukf6ppd016cju5ouv\n4Y4rF5cxPnSJX45I9F2BZ3hlbfJqSJvEOFxGQVER0QKBgQCSW+jMaWU6WAig9men\nWpwR3lIdxEOa9nTM+i8hOmP/2gwxthMq0Y9v66vajWVJuiAhY25VCuw1ihVNnaMa\nxXb41XBBDCC6J94jZgB39bbWQGIhkYTOiDvkthDkTvUhgevei21ksUK1gr+yt7iN\nJjsvT7m2fTk+ylys9ghnHRuF+w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "autoplus@cotizadorautoplus.iam.gserviceaccount.com",
+  "client_id": "108690841042367598862",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/autoplus%40cotizadorautoplus.iam.gserviceaccount.com"
