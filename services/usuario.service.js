@@ -1,4 +1,4 @@
-const Usuario = require('../modelos/usuario.ts')
+const Usuario = require('../modelos/usuario.js')
 var service = {};
 
 service.add = async (usuario) => {
@@ -31,9 +31,9 @@ service.getById = async (id) => {
         throw Error(e)
     }
 };
-service.getByUsername = async (username) => {
+service.getByUsername = async (data) => {
     try {
-        return await Usuario.findOne({usuarioSistema:username});
+        return await Usuario.findOne({username:data});
     } catch (e) {
         throw Error(e)
     }

@@ -1,5 +1,5 @@
-const UsuarioService = require('../services/usuario.service.ts');
-const Usuario = require('../modelos/usuario.ts');
+const UsuarioService = require('../services/usuario.service');
+const Usuario = require('../modelos/usuario');
 const bcrypt = require('bcryptjs');
 const controller = {};
 

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const usuarioSchema = new Schema({
     nombre: {type: String, required: [true, 'Nombre requerido']},
     email: {type: String},
-    usuarioSistema: {type: String, unique: true, required: [true, 'El usuario es necesario']},
+    username: {type: String, unique: true, required: [true, 'El usuario es necesario']},
     usuario: {type: Schema.Types.ObjectId, ref: 'Usuarios'},
     celular: {type: String},
     habilitado: {type: Boolean},

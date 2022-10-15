@@ -1,5 +1,5 @@
-var UsuarioController = require('../controller/usuario.controller.ts');
-var mdAutenticacion = require('../middlewares/autenticacion.ts');
+var UsuarioController = require('../controller/usuario.controller');
+var mdAutenticacion = require('../middlewares/autenticacion');
 var express = require('express');
 var router = express.Router();
 
