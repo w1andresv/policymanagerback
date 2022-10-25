@@ -8,6 +8,7 @@ const connection = require('./conexion')
 const authRoutes = require('./routes/auth.router');
 const themeRoutes = require('./routes/theme.router');
 const uploadRoutes = require('./routes/adjunto.router');
+const featureFlagRoutes = require('./routes/featureFlag.router');
 
 require('dotenv').config({path: '.env'});
 
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({extended: true, limit: '50mb'}));
 app.use('/auth', authRoutes);
 app.use('/theme', themeRoutes);
 app.use('/uploadfile', uploadRoutes);
+app.use('/featureFlag', featureFlagRoutes);
 app.get('/', async (req, res) => {
     return res.status(200).send('Policy manager');
 });
