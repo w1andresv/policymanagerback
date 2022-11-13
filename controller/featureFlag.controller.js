@@ -25,7 +25,7 @@ controller.getConfig = async (req, res, next) => {
   ];
   console.log(req.headers)
   setTimeout(() => {
-    console.log('Se envio la configuración => '+ new Date())
+    console.log('Configuration was sent to '+ new Date())
     return res.status(200).json(list);
   }, 100);
 };
