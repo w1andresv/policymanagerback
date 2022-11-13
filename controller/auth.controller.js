@@ -83,23 +83,23 @@ controller.login = async (req, res, next) => {
         if (!data) {
             return res.status(200).json({
                 estado: false,
-                mensaje: 'Credenciales incorrectas '
+                mensaje: 'Access denied'
             });
         }
         if (!bcrypt.compareSync(password, data.password)) {
             return res.status(200).json({
                 estado: false,
-                mensaje: 'Credenciales incorrectas'
+                mensaje: 'Access denied'
             });
         }
         if (!data.habilitado) {
             return res.status(200).json({
                 estado: false,
-                mensaje: 'Acceso denegado'
+                mensaje: 'Access denied'
             });
         }
-        data.password = ':)';
-        const token = jwt.sign({usuario: data}, config.SEED, {expiresIn: config.TIME}); // 4 horas
+        data.password = 'Not access';
+        const token = jwt.sign({user: data}, config.SEED, {expiresIn: config.TIME}); // 4 horas
         return res.status(200).json({
             estado: true,
             token: token

@@ -5,7 +5,7 @@ controller.getConfig = async (req, res, next) => {
   const list = [
     { key: 'coupons', value: true },
     { key: 'home', value: true },
-    { key: 'productos', value: false },
+    { key: 'products', value: true },
     { key: 'categorias', value: true },
     { key: 'branches', value: false },
     { key: 'accounts', value: true },
@@ -23,6 +23,7 @@ controller.getConfig = async (req, res, next) => {
     { key: 'onboarding', value: true },
     { key: 'reports', value: true }
   ];
+  console.log(req.headers)
   setTimeout(() => {
     console.log('Se envio la configuración => '+ new Date())
     return res.status(200).json(list);

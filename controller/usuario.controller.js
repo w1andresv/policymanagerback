@@ -1,19 +1,19 @@
-const UsuarioService = require('../services/usuario.service');
-const Usuario = require('../modelos/usuario');
+const UserService = require('../services/usuario.service');
+const User = require('../modelos/usuario');
 const bcrypt = require('bcryptjs');
 const controller = {};
 
 controller.add = async (req, res, next) => {
-    const usuario = new Usuario({
-        nombre: req.body.nombre,
-        usuarioSistema: req.body.usuarioSistema,
+    const user = new User({
+        name: req.body.name,
+        usermane: req.body.usermane,
         password: bcrypt.hashSync(req.body.password, 10),
         rol: req.body.rol,
         email: req.body.email,
-        habilitado: req.body.habilitado
+        enabled: req.body.enabled
     });
     try {
-        const data = await UsuarioService.add(usuario);
+        const data = await UserService.add(user);
         return res.status(200).json(data);
     } catch (e) {
         return res.status(500).json(e.message);
@@ -22,16 +22,16 @@ controller.add = async (req, res, next) => {
 controller.update = async (req, res, next) => {
     const id = req.body._id;
     const body = req.body;
-    const usuario = await UsuarioService.getById(id);
-    if (usuario) {
-        usuario.nombre= body.nombre;
-        usuario.usuarioSistema= body.usuarioSistema;
-        usuario.password= bcrypt.hashSync(body.password, 10),
-        usuario.rol= body.rol;
-        usuario.email= body.email;
-        usuario.habilitado= body.habilitado;
+    const user = await UserService.getById(id);
+    if (user) {
+        user.name= body.name;
+        user.usermane= body.usermane;
+        user.password= bcrypt.hashSync(body.password, 10),
+        user.rol= body.rol;
+        user.email= body.email;
+        user.enabled= body.enabled;
         try {
-            const data = await UsuarioService.create(usuario);
+            const data = await UserService.create(user);
             return res.status(200).json(data);
         } catch (e) {
             return res.status(500).json(e.message);
@@ -42,7 +42,7 @@ controller.update = async (req, res, next) => {
 };
 controller.getAll = async (req, res, next) => {
     try {
-        const data = await UsuarioService.getAll();
+        const data = await UserService.getAll();
         return res.status(200).json(data);
     } catch (e) {
         return res.status(500).json(e.message);
@@ -50,7 +50,7 @@ controller.getAll = async (req, res, next) => {
 };
 controller.getById = async (req, res, next) => {
     try {
-        const data = await UsuarioService.getById(req.params.id);
+        const data = await UserService.getById(req.params.id);
         return res.status(200).json(data);
     } catch (e) {
         return res.status(500).json(e.message);
@@ -59,7 +59,7 @@ controller.getById = async (req, res, next) => {
 controller.getByUsername = async (req, res, next) => {
     const query = { username: req.params.username };
     try {
-        const data = await UsuarioService.getOne(query);
+        const data = await UserService.getOne(query);
         return res.status(200).json(data);
     } catch (e) {
         return res.status(500).json(e.message);
@@ -68,7 +68,7 @@ controller.getByUsername = async (req, res, next) => {
 controller.getByEmail = async (req, res, next) => {
     const query = { email: req.params.email };
     try {
-        const data = await UsuarioService.getOne(query);
+        const data = await UserService.getOne(query);
         return res.status(200).json(data);
     } catch (e) {
         return res.status(500).json(e.message);
