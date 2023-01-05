@@ -64,11 +64,11 @@ controller.resetPassword = async (req, res) => {
         // returning result
         return transporter.sendMail(mailOptions, (erro, info) => {
             if (erro) {
-                return res.status(500).json({estado: false, mensaje: erro});
+                return res.status(500).json({ estado: false, mensaje: erro });
             }
             usuarioDB.password = npass;
             UsuarioService.update(usuarioDB);
-            return res.status(200).json({estado: true, mensaje: 'Correo enviado con exito.'});
+            return res.status(200).json({ estado: true, mensaje: 'Correo enviado con exito.' });
         });
     } catch (e) {
         return res.status(500).json(e.message);
@@ -86,20 +86,20 @@ controller.login = async (req, res, next) => {
                 mensaje: 'Access denied'
             });
         }
-        if (!bcrypt.compareSync(password, data.password)) {
+       if (!bcrypt.compareSync(password, data.password)) {
             return res.status(200).json({
-                estado: false,
-                mensaje: 'Access denied'
+              estado: false,
+               mensaje: 'Access denied'
             });
         }
-        if (!data.habilitado) {
+        if (!data.enabled) {
             return res.status(200).json({
                 estado: false,
                 mensaje: 'Access denied'
             });
         }
         data.password = 'Not access';
-        const token = jwt.sign({user: data}, config.SEED, {expiresIn: config.TIME}); // 4 horas
+        const token = jwt.sign({ user: data }, config.SEED, { expiresIn: config.TIME }); // 4 horas
         return res.status(200).json({
             estado: true,
             token: token

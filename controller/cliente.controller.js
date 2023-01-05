@@ -1,5 +1,5 @@
 const ClientService = require('../services/cliente.service');
-const Client = require('../modelos/cliete');
+const Client = require('../modelos/cliente');
 const jwt = require('jsonwebtoken');
 const controller = {};
 

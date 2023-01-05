@@ -14,5 +14,5 @@ const clienteSchema = new Schema({
     updateDate: {type: Date},
     enabled: {type: Boolean},
 }, {collection: 'clientes'});
-usuarioSchema.plugin(uniqueValidator, {message: '{PATH} should be unique'});
+clienteSchema.plugin(uniqueValidator, {message: '{PATH} should be unique'});
 module.exports = mongoose.model('Cliente', clienteSchema);

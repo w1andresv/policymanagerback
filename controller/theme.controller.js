@@ -8,7 +8,7 @@ controller.add = async (req, res, next) => {
   var usuarioLogeqdo = jwt.decode(req.headers.authorization);
   const theme = new Theme({
     theme: req.body.theme,
-    usuario: usuarioLogeqdo.usuario._id,
+    usuario: usuarioLogeqdo.user._id,
   });
   try {
     const data = await ThemeService.add(theme);
@@ -20,10 +20,10 @@ controller.add = async (req, res, next) => {
 controller.update = async (req, res, next) => {
   var usuarioLogeqdo = jwt.decode(req.headers.authorization);
   const body = req.body;
-  const value = await ThemeService.getByUser(usuarioLogeqdo.usuario._id);
+  const value = await ThemeService.getByUser(usuarioLogeqdo.user._id);
   if (value) {
     value.theme = body.theme;
-    value.usuario = usuarioLogeqdo.usuario._id;
+    value.usuario = usuarioLogeqdo.user._id;
     try {
       const data = await ThemeService.create(value);
       return res.status(200).json(data);
@@ -31,14 +31,14 @@ controller.update = async (req, res, next) => {
       return res.status(500).json(e.message);
     }
   } else {
-    return res.status(400).json(e.message);
+    return res.status(400).json(null);
   }
 };
 
 controller.getByUser = async (req, res, next) => {
   var usuarioLogeqdo = jwt.decode(req.headers.authorization);
   try {
-    const data = await ThemeService.getByUser(usuarioLogeqdo.usuario._id);
+    const data = await ThemeService.getByUser(usuarioLogeqdo.user._id);
     return res.status(200).json(data);
   } catch (e) {
     return res.status(500).json(e.message);
