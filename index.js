@@ -22,8 +22,8 @@ app.use('/theme', themeRoutes);
 app.use('/uploadfile', uploadRoutes);
 app.use('/users', userRoutes);
 app.use('/clients', clientRoutes);
-app.get('/', async (req, res) => {
-  return res.status(200).send('Policy manager');
+app.get('/',  (req, res) => {
+   res.status(200).send('Policy manager');
 });
 
 const port = process.env.PORT || 3000;
