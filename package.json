@@ -4,6 +4,7 @@
   "description": "Policy manager",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,9 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "file-system": "^2.2.2",
+    "googleapis": "^108.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.5",
     "mongoose-unique-validator": "^3.1.0",
